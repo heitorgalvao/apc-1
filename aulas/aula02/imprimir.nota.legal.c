@@ -5,7 +5,7 @@ printf("-----------------------------------\n");
 printf("              NOTA        LEGAL    \n");
 printf("-----------------------------------\n");
 printf("item          Qde      Prc        valor\n");
-printf("%s %03i %f %f \n","caneta azul"    002      2.00        4.00);
+printf("%s %03i %f %f\n","caneta azul"    002      2.00        4.00);
 printf("%s %03i %f %f\n","Borracha"       001      5.00        5.00);
 printf("%s %03i %f %f\n","Resma de papel"  001     12.00       12.00);
 printf("-----------------------------------------\n");
