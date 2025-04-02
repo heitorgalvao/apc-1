@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>//gcc nome do arquivo.c -lm -o a.out
 
 int main(){
     char tecla;
@@ -19,6 +19,10 @@ int main(){
     dizima = 1.0123456789;
     printf("valor da dizima = %.10f\n", dizima);
     dizima = 2.3333333333333;
+
+    int inteiro = 10;
+    printf("%i\n", inteiro);
+
 
 return 0;
 }
