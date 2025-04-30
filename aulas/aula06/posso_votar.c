@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(){
     int idade = 0;
     printf("informe sua idade: ");
     scanf("%i", &idade);
@@ -10,10 +10,9 @@ int main() {
     }else{
         if(idade >=18 && idade <= 70);
             printf("voce e obrigado a votar");
-        }else{
+        }else{        
             printf("voce pode votar!\n");
-        }
-    }
-    
-    return 0;
-}
+            }
+        return 0;
+         }
+     
