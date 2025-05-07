@@ -18,7 +18,7 @@ int main(){
     printf("9 x %i =%i\n", numero,9*numero);
     printf("10 x %i =%i\n", numero,10*numero);*/
 
-    for(int i = 1; i <= 10; i++){
+    for(int i = 1; i <= 10 ; i++){
         printf("%i x %i =%i\n",i, numero, i*numero);
     }
     for(int i=10; i >=1; i--){//10 a 1
