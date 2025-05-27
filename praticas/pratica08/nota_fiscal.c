@@ -26,4 +26,4 @@
      printf("Total Geral: %.2f\n", total);
 
      return 0 ;
-    }// tenho que arrumar 
+    }
