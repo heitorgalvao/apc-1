@@ -1,52 +1,85 @@
 #include <stdio.h>
 #include <string.h>
-int main(){
-    {
-        struct endereco_t{
-            char logradouro[61];
-            int numero;
-            int cep;
-            char complemento[61];
-            char cidade[61];
-            char uf[3];
+
+int main()
+{
+    struct endereco_t {
+        char logradouro[61];
+        int numero;
+        char bairro[41];
+        char cidade[41];
+        char uf[3];
+        int cep;
     };
+
     struct cliente_t
     {
-    char nome [61];
-    long long int telefone;
-    char email[61];
-    struct endereco_t endereco;
+        char nome[101];
+        long long int telefone;
+        char email[101];
+        struct endereco_t endereco;
     };
+
+    struct fornecedor_t {
+        struct endereco_t endereco;
+    };
+
     struct cliente_t cliente;
-        strcpy(cliente.nome, "qualquer");
-        cliente.telefone = 154338765432l;
-        stcrpy(cliente.email,"qualquercoisa.com");
-        strcpy(cliente.endereco.logradouro,"sqs");
-        cliente.endereco.numero = 612;
-        cliente.endereco.cep = 765321347;
-        stcrpy(cliente.endereco.complemento, "iesb");
-        stcrpy(cliente.endereco.cidade, "brasilia");
-        stcrpy(cliente.endereco.uf, "DF");
 
-        printf("dados do cliente\n");
-        printf("nome:%s\n",cliente.nome);
-        printf("telefone:%lli\n",cliente.telefone);
-        printf("email:%s\n", cliente.email);
-        printf("endereco:%s, %i-%s-%s/%s\n", cliente.endereco.logradouro,cliente.endereco.numero,
-        cliente.endereco.complemento, cliente.endereco.cidade, cliente.endereco.uf);
-        printf("cep:%i", cliente.endereco.cep);
+    strcpy(cliente.nome, "Jose");
+    cliente.telefone = 6199999999L;
+    strcpy(cliente.email, "jose@iesb.br");
+    strcpy(cliente.endereco.logradouro, "SQS");
+    cliente.endereco.numero = 612;
+    strcpy(cliente.endereco.bairro, "Asa sul");
+    strcpy(cliente.endereco.cidade, "Brasilia");
+    strcpy(cliente.endereco.uf, "DF");
+    cliente.endereco.cep = 70000000;   
 
-        struct cliente_t cliente[10];
 
-        for(int i=0; i<10; i+1){
-        printf("Entre com o nome do cliente: ");
-        scanf("%s", &cliente[i].nome);
+    struct cliente_t clientes[10];
 
-        printf("entre com o telefone do cliente: ");
-        scanf("%lli", &cliente[i].telefone);
+    for(int i=0; i<10; i++) {
+        printf("Dados do cliente %i\n", i+1);
+        printf("Nome do cliente: ");
+        scanf("%[^\n]s", clientes[i].nome);
+        while(getchar() != '\n');
+        printf("Telefone do cliente: ");
+        scanf("%lli", &clientes[i].telefone);
+        while(getchar() != '\n');
+        printf("E-mail do cliente: ");
+        scanf("%[^\n]s", clientes[i].email);
+        while(getchar() != '\n');
+        printf("Endereco do cliente:\n");
+        printf("Logradouro: ");
+        scanf("%[^\n]s", clientes[i].endereco.logradouro);
+        while(getchar() != '\n');
+        printf("Numero: ");
+        scanf("%i", &clientes[i].endereco.numero);
+        while(getchar() != '\n');
+        printf("Bairro: ");
+        scanf("%[^\n]s", clientes[i].endereco.bairro);
+        while(getchar() != '\n');
+        printf("Cidade: ");
+        scanf("%[^\n]s", clientes[i].endereco.cidade);
+        while(getchar() != '\n');
+        printf("UF: ");
+        scanf("%[^\n]s", clientes[i].endereco.uf);
+        while(getchar() != '\n');
+        printf("CEP: ");
+        scanf("%i", &clientes[i].endereco.cep);
+        while(getchar() != '\n');
+    }
 
-        printf("")
-
-        }
-    return 0;
-}
+    printf("Meus Clientes\n");
+    for(int i=0; i<10; i++) {
+        printf("Dados do cliente %i\n", i+1);
+        printf("Nome do cliente: %s\n", clientes[i].nome);
+        printf("Telefone do cliente: %lli\n", clientes[i].telefone);
+        printf("E-mail do cliente: %s", clientes[i].email);
+        printf("Endereco do cliente:\n");
+        printf("Logradouro: %s, %i - %s - %s/%s\n", clientes[i].endereco.logradouro, clientes[i].endereco.numero, clientes[i].endereco.bairro, clientes[i].endereco.cidade, clientes[i].endereco.uf);
+        printf("CEP: %i\n", clientes[i].endereco.cep); 
+        
+        return 0;
+    }
