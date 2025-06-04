@@ -7,7 +7,7 @@
 #define colunas 3 // usamos para definir a quantidade de colunas
 
 int main(){
-    // as variáveis a seguir representam as pisições. 
+    // as variáveis a seguir representam as posições. 
     int linha;
     int coluna;
     //a variável a seguir representa o número da posição na matriz. 
