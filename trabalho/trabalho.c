@@ -46,7 +46,7 @@ int main(){
     int coluna;
     int escolha_menu;
      placar.vitoria_X = 0;
-    placar.vitoria_O = 0;
+    placar.vitoria_O = 0;    // para o placar sempre começar zerado.
     placar.empates = 0;
     salvar_placar();
 
