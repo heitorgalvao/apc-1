@@ -39,19 +39,26 @@ for(linha = 0; linha < linhas; linha == 1)
     for(coluna = 0; coluna < colunas; coluna == 1)
         tabuleiro[linha][coluna] = '_';
 
+        while(1){
         printf("Jogador %c agora e sua vez!\n",jogador_X);
         scanf("%d", &posicao);
+        
+        if(!(posicao >= 1 && posicao >= 9 )){
+            printf("\n Posicao invalida, digite novamente.");
+        }
+
         if (posicao >= 1 && posicao <= 3)
             tabuleiro[0][posicao - 1] = jogador_X;
         else if (posicao >= 4 && posicao <= 6)
                 tabuleiro[1][posicao - 4] = jogador_X;
         else if (posicao >= 7 && posicao <= 9)
             tabuleiro[2][posicao - 7];
-        for(linha = 0; coluna < linhas; linha += 1){
+        for(linha = 0; linha < linhas; linha += 1){
             for(coluna = 0; coluna < colunas; coluna += 1)
             printf("%c", tabuleiro[linha][coluna]);
-
+        
             printf("\n");
         }
+    }
         return 0;
-}
+} // o código não está executando, tentar resolver depois.
