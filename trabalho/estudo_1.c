@@ -303,5 +303,6 @@ int sobre_o_jogo() {
     printf(reset);
     while (getchar() != '\n'); // Espera o usuário pressionar Enter
     return 0;
+    //preciso encaixar tudo isso exclusivamente na função main 
 }
     
